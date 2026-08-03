@@ -175,7 +175,7 @@ button {
 .message-card h2 {
   margin: 0;
   padding: 20px 16px 10px;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 900;
   line-height: 1.08;
 }
@@ -183,7 +183,7 @@ button {
 .message-card p {
   margin: 0;
   padding: 0 16px 17px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.52;
 }
@@ -200,7 +200,7 @@ button {
   margin: 0 16px;
   border-top: 1px solid #eceef2;
   color: #a1a4ac;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -280,11 +280,11 @@ button {
   }
 
   .message-card h2 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .message-card p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .compose-bar {
