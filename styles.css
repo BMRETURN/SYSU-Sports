@@ -57,7 +57,7 @@ button {
   z-index: 3;
   display: grid;
   height: 54px;
-  grid-template-columns: 93px 1fr 70px;
+  grid-template-columns: 64px 1fr 64px;
   align-items: center;
   border-bottom: 1px solid var(--hairline);
   background: var(--header-bg);
@@ -75,7 +75,6 @@ button {
 .header-left {
   display: flex;
   align-items: center;
-  gap: 10px;
   padding-left: 14px;
 }
 
@@ -86,19 +85,6 @@ button {
   border-left: 3px solid #05060a;
   border-radius: 2px;
   transform: rotate(45deg);
-}
-
-.unread-badge {
-  display: inline-flex;
-  min-width: 29px;
-  height: 24px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  background: #dedfe4;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 1;
 }
 
 .more-button {
@@ -272,7 +258,7 @@ button {
 
 @media (max-width: 370px) {
   .chat-header {
-    grid-template-columns: 84px 1fr 58px;
+    grid-template-columns: 58px 1fr 58px;
   }
 
   .chat-header h1 {
