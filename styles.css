@@ -151,8 +151,14 @@ button {
 .cards {
   position: relative;
   z-index: 1;
-  display: grid;
-  gap: 23px;
+}
+
+.message-card + .message-card {
+  margin-top: 23px;
+}
+
+.message-card + .message-time {
+  margin-top: 23px;
 }
 
 .message-card {
