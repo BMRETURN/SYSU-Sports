@@ -380,18 +380,20 @@ button {
   height: 35px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border-radius: 22px;
   font-size: 17px;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .account-pill {
-  min-width: 87px;
+  width: 87px;
   background: #ffffff;
 }
 
 .logout-pill {
-  min-width: 63px;
+  width: 63px;
   border: 1.5px solid #ffffff;
   color: #ffffff;
 }
@@ -744,7 +746,7 @@ button {
   }
 
   .campus-nav h1 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .sysu-brand {
