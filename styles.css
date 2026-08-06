@@ -311,10 +311,10 @@ button {
 .campus-back::before {
   content: "";
   position: absolute;
-  top: 19px;
-  left: 14px;
-  width: 16px;
-  height: 16px;
+  top: 20px;
+  left: 16px;
+  width: 13px;
+  height: 13px;
   border-bottom: 3px solid #05060a;
   border-left: 3px solid #05060a;
   border-radius: 2px;
@@ -453,23 +453,51 @@ button {
   top: 59px;
   left: 0;
   display: inline-flex;
-  min-width: 61%;
+  min-width: auto;
   height: 52px;
   align-items: center;
-  gap: 20px;
-  padding: 0 22px;
+  gap: 18px;
+  padding: 0 20px;
   background: rgba(255, 255, 255, 0.76);
   color: #00723f;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
   line-height: 1;
   white-space: nowrap;
 }
 
 .campus-card b {
-  font-size: 29px;
-  font-weight: 500;
-  line-height: 1;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 18px;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+}
+
+.campus-card b::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: #00723f;
+}
+
+.campus-card b::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #00723f;
+  border-right: 3px solid #00723f;
+  transform: rotate(45deg);
 }
 
 .reservation-entry {
@@ -767,7 +795,7 @@ button {
   }
 
   .campus-card span {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .quick-panel h2,
