@@ -22,7 +22,7 @@ body {
 
 body {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   background: #dfe1e7;
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
@@ -37,10 +37,14 @@ button {
   padding: 0;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
 .phone-shell {
   width: min(100vw, var(--screen-width));
   height: 100dvh;
-  margin: 0 auto;
+  margin: 0;
   background: var(--wechat-bg);
   overflow: hidden;
 }
@@ -167,6 +171,9 @@ button {
   border-radius: 5px;
   background: var(--card);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .message-card h2 {
@@ -265,6 +272,452 @@ button {
   overflow: hidden;
 }
 
+.campus-screen {
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+  overflow: hidden;
+  background: #efefef;
+}
+
+.campus-nav {
+  display: grid;
+  flex: 0 0 54px;
+  height: 54px;
+  grid-template-columns: 48px 48px 1fr 48px;
+  align-items: center;
+  border-bottom: 1px solid #e6e7eb;
+  background: #ffffff;
+}
+
+.campus-nav h1 {
+  margin: 0;
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.campus-back,
+.campus-close,
+.campus-more {
+  position: relative;
+  width: 48px;
+  height: 54px;
+}
+
+.campus-back::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 3px solid #05060a;
+  border-left: 3px solid #05060a;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.campus-close::before,
+.campus-close::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 14px;
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  background: #05060a;
+}
+
+.campus-close::before {
+  transform: rotate(45deg);
+}
+
+.campus-close::after {
+  transform: rotate(-45deg);
+}
+
+.campus-more {
+  justify-self: end;
+  padding-right: 15px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.sysu-brand {
+  display: flex;
+  flex: 0 0 66px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 22px;
+  background: #00723f;
+}
+
+.sysu-brand img {
+  width: 153px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.brand-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #00723f;
+  white-space: nowrap;
+}
+
+.account-pill,
+.logout-pill {
+  display: inline-flex;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.account-pill {
+  min-width: 87px;
+  background: #ffffff;
+}
+
+.logout-pill {
+  min-width: 63px;
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+}
+
+.campus-content {
+  flex: 1;
+  min-height: 0;
+  padding: 18px 17px 24px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.campus-panel {
+  padding: 23px 18px 25px;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.campus-panel h2 {
+  margin: 0 0 18px;
+  color: #00723f;
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.campus-list {
+  display: grid;
+  gap: 15px;
+  padding: 0 12px;
+}
+
+.campus-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 165px;
+  overflow: hidden;
+  border-radius: 17px;
+  background: #dce3de;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.28);
+  text-align: left;
+}
+
+.campus-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campus-card span {
+  position: absolute;
+  top: 59px;
+  left: 0;
+  display: inline-flex;
+  min-width: 61%;
+  height: 52px;
+  align-items: center;
+  gap: 20px;
+  padding: 0 22px;
+  background: rgba(255, 255, 255, 0.76);
+  color: #00723f;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.campus-card b {
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.reservation-entry {
+  background:
+    radial-gradient(circle at 82% 50%, rgba(151, 195, 171, 0.42) 0 34%, transparent 34%),
+    #dcebe3;
+}
+
+.reservation-entry span {
+  top: 59px;
+  min-width: 43%;
+}
+
+.receipt-icon {
+  position: absolute;
+  top: 46px;
+  right: 36px;
+  width: 78px;
+  height: 94px;
+  border: 7px solid #00723f;
+  border-bottom: 0;
+  border-radius: 7px 7px 0 0;
+}
+
+.receipt-icon::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 18px;
+  width: 38px;
+  height: 7px;
+  border-radius: 4px;
+  background: #00723f;
+  box-shadow: 0 21px 0 #00723f, 0 42px 0 #00723f;
+}
+
+.receipt-icon::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  bottom: -22px;
+  left: -7px;
+  height: 29px;
+  background:
+    linear-gradient(135deg, #00723f 0 14px, transparent 14px) 0 0 / 28px 29px repeat-x,
+    linear-gradient(225deg, #00723f 0 14px, transparent 14px) 14px 0 / 28px 29px repeat-x;
+}
+
+.quick-panel {
+  margin-top: 19px;
+  padding: 21px 10px 15px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+.quick-panel h2,
+.reservation-summary h2,
+.notice-section h2 {
+  margin: 0;
+  color: #00723f;
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.quick-form {
+  display: grid;
+  gap: 38px;
+  margin-top: 24px;
+}
+
+.select-field,
+.reserve-button {
+  display: flex;
+  width: 100%;
+  height: 49px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.select-field {
+  border: 1.5px solid #a9a9a9;
+  padding: 0 14px;
+  color: #8a8a8a;
+  background: #ffffff;
+  text-align: left;
+}
+
+.select-field::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 7px solid #8a8a8a;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.date-field {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 9px;
+}
+
+.date-field .select-field::after {
+  display: none;
+}
+
+.calendar-icon {
+  position: relative;
+  width: 27px;
+  height: 28px;
+  margin-left: 4px;
+  border: 4px solid #737373;
+  border-top-width: 8px;
+  border-radius: 2px;
+}
+
+.calendar-icon::before,
+.calendar-icon::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  width: 5px;
+  height: 10px;
+  border-radius: 2px;
+  background: #737373;
+}
+
+.calendar-icon::before {
+  left: 3px;
+}
+
+.calendar-icon::after {
+  right: 3px;
+}
+
+.calendar-icon {
+  background:
+    linear-gradient(#737373, #737373) 7px 13px / 9px 5px no-repeat,
+    #ffffff;
+}
+
+.reserve-button {
+  justify-content: center;
+  border: 0;
+  color: #a3a3a3;
+  background: #dfdfdf;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.reservation-summary {
+  position: relative;
+  padding: 45px 0 42px;
+}
+
+.reservation-summary p {
+  margin: 34px 0 0;
+  color: #252525;
+  font-size: 20px;
+  text-align: center;
+}
+
+.reservation-summary a,
+.all-notices {
+  display: block;
+  margin-top: 25px;
+  color: #00723f;
+  font-size: 21px;
+  font-weight: 900;
+  text-align: right;
+  text-decoration: none;
+}
+
+.notice-section {
+  padding-bottom: 24px;
+}
+
+.notice-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.notice-list a {
+  display: grid;
+  min-height: 49px;
+  grid-template-columns: 1fr 32px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 18px;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.notice-list b {
+  color: #00723f;
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: right;
+}
+
+.campus-footer {
+  margin: 0 -17px -24px;
+  padding: 29px 18px 24px;
+  background: #2f2f2f;
+  color: #ffffff;
+}
+
+.campus-footer h2 {
+  margin: 0 0 15px;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.campus-footer p {
+  margin: 0;
+  color: #eeeeee;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.campus-footer .qr-label {
+  margin-top: 34px;
+}
+
+.campus-footer img {
+  display: block;
+  width: 122px;
+  height: 122px;
+  margin: 5px 0 29px;
+  object-fit: cover;
+  background: #ffffff;
+}
+
+.contact-text {
+  word-break: break-all;
+}
+
 @media (max-width: 370px) {
   .chat-header {
     grid-template-columns: 58px 1fr 58px;
@@ -284,5 +737,45 @@ button {
 
   .compose-bar {
     gap: 9px;
+  }
+
+  .campus-nav {
+    grid-template-columns: 45px 45px 1fr 45px;
+  }
+
+  .campus-nav h1 {
+    font-size: 18px;
+  }
+
+  .sysu-brand {
+    padding: 0 16px;
+  }
+
+  .sysu-brand img {
+    width: 132px;
+  }
+
+  .account-pill,
+  .logout-pill {
+    font-size: 15px;
+  }
+
+  .campus-card {
+    height: 150px;
+  }
+
+  .campus-card span {
+    font-size: 19px;
+  }
+
+  .quick-panel h2,
+  .reservation-summary h2,
+  .notice-section h2 {
+    font-size: 21px;
+  }
+
+  .select-field,
+  .reserve-button {
+    font-size: 18px;
   }
 }

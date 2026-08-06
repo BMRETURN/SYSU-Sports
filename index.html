@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main class="phone-shell" aria-label="体育场馆预订系统消息界面">
-    <section class="chat-screen">
+  <main class="phone-shell" aria-label="体育场馆预订系统">
+    <section class="chat-screen" id="chatScreen">
       <header class="chat-header">
         <div class="header-left" aria-hidden="true">
           <span class="back-icon"></span>
@@ -36,6 +36,94 @@
         <button class="emoji-button" type="button" aria-label="表情"></button>
         <button class="plus-button" type="button" aria-label="添加"></button>
       </footer>
+    </section>
+
+    <section class="campus-screen is-hidden" id="campusScreen" aria-label="中山大学体育场馆预订系统校区选择">
+      <header class="campus-nav">
+        <button class="campus-back" type="button" data-return-chat aria-label="返回"></button>
+        <button class="campus-close" type="button" data-return-chat aria-label="关闭"></button>
+        <h1>中山大学体育场馆预订系统</h1>
+        <button class="campus-more" type="button" aria-label="更多">•••</button>
+      </header>
+
+      <div class="sysu-brand">
+        <img src="./assets/sysu/logo-wordmark.png" alt="中山大学 SUN YAT-SEN UNIVERSITY">
+        <div class="brand-actions" aria-hidden="true">
+          <span class="account-pill">我的账号</span>
+          <span class="logout-pill">登出</span>
+        </div>
+      </div>
+
+      <div class="campus-content">
+        <section class="campus-panel">
+          <h2>校区选择</h2>
+          <div class="campus-list">
+            <button class="campus-card" type="button">
+              <img src="./assets/sysu/south.jpg" alt="广州校区南校园">
+              <span>广州校区南校园 <b>→</b></span>
+            </button>
+            <button class="campus-card" type="button">
+              <img src="./assets/sysu/north.jpg" alt="广州校区北校园">
+              <span>广州校区北校园 <b>→</b></span>
+            </button>
+            <button class="campus-card" type="button">
+              <img src="./assets/sysu/east.jpg" alt="广州校区东校园">
+              <span>广州校区东校园 <b>→</b></span>
+            </button>
+            <button class="campus-card" type="button">
+              <img src="./assets/sysu/shenzhen.jpg" alt="深圳校区">
+              <span>深圳校区 <b>→</b></span>
+            </button>
+            <button class="campus-card" type="button">
+              <img src="./assets/sysu/zhuhai.png" alt="珠海校区">
+              <span>珠海校区 <b>→</b></span>
+            </button>
+            <button class="campus-card reservation-entry" type="button">
+              <span>我的预约 <b>→</b></span>
+              <i class="receipt-icon" aria-hidden="true"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="quick-panel">
+          <h2>快速预约</h2>
+          <div class="quick-form">
+            <button class="select-field" type="button">选择校区 <span></span></button>
+            <button class="select-field" type="button">选择场地类型 <span></span></button>
+            <div class="date-field">
+              <i class="calendar-icon" aria-hidden="true"></i>
+              <button class="select-field" type="button">选择日期</button>
+            </div>
+            <button class="select-field" type="button">选择时间段 <span></span></button>
+            <button class="reserve-button" type="button">立即预约</button>
+          </div>
+        </section>
+
+        <section class="reservation-summary">
+          <h2>我的预约</h2>
+          <p>暂无预约</p>
+          <a href="javascript:;" aria-label="查看所有预定">查看所有预定</a>
+        </section>
+
+        <section class="notice-section">
+          <h2>通知公告</h2>
+          <div class="notice-list">
+            <a href="javascript:;">2025-09-18 现金支付使用说明 <b>→</b></a>
+            <a href="javascript:;">2025-09-18 现金支付导图 <b>→</b></a>
+            <a href="javascript:;">2025-09-18 中山大学体育场馆运动时管理办法（修订） <b>→</b></a>
+            <a href="javascript:;">2025-09-18 中山大学体育场馆管理办法 <b>→</b></a>
+          </div>
+          <a class="all-notices" href="javascript:;">查看所有公告</a>
+        </section>
+
+        <footer class="campus-footer">
+          <h2>中山大学体育场馆管理与预约系统</h2>
+          <p>广东省广州市海珠区新港西路35号</p>
+          <p class="qr-label">填表申请补发运动时：</p>
+          <img src="./assets/sysu/repair-qr.jpg" alt="填表申请补发运动时二维码">
+          <p class="contact-text">联系我们: zdtiyu@163.com | 体育场馆物业值班电话： 南校园：020-84115839 北校园：020-87335717 东校园：020-39333766 深圳校区：0755-23260189 珠海校区：0756-3668220</p>
+        </footer>
+      </div>
     </section>
   </main>
 
